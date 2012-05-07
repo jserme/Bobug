@@ -24,7 +24,10 @@
 	border:1px solid #777;
 	border-radius:10px;
 	-moz-border-radius:10px;
-	-webkit-border-radius:10px
+	-webkit-border-radius:10px;
+    position:fixed;
+    right:0;
+    bottom:0;
 }
 
 .bobug-console-hd, .bobug-console-bd, .bobug-console-ft {
