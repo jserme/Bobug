@@ -28,7 +28,7 @@ use the apis below
 
 
 
-###set ui language, default is English
+###set UI language, default is English
 ```javascript
 Bobug.setLang( 'zh' ); 
 ```
