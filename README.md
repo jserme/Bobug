@@ -8,8 +8,10 @@ The UI and css file copy from [YUI](http://yuilibrary.com/yui/docs/console/conso
 
 ##Useage
 1. include the js and css file in your file
+```html
     <link type="text/css" rel="stylesheet" href="bobug.css" />
     <script type="text/javascript" charset="utf-8" src="bobug.js"> </script>
+```
 2.use the apis below
 
 ##API
@@ -20,6 +22,7 @@ The UI and css file copy from [YUI](http://yuilibrary.com/yui/docs/console/conso
 
 
 ##site
+* [demo] (http://jserme.github.com/Bobug/)
 * [source code](http://github.com/jserme/Bobug)
 * [author site](http://jser.me)
 
