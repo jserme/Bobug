@@ -424,7 +424,6 @@ Bobug.lang.zh = {
 			//TODO
 			self.filterCustom = function() {
                 var val = trim(this.value);
-                console.log( val );
 
                 if( val ) {
                     self.model.addFilter('filterCustomStr', function(log) {
@@ -585,7 +584,7 @@ Bobug.lang.zh = {
 		},
 
 		clear: function() {
-			this.model.clear(str);
+			this.model.clear();
 		},
 
 		loadJs: function(src) {
