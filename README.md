@@ -7,15 +7,88 @@ A pure javascript console without dependence of other javascript lib
 The UI and css file copy from [YUI](http://yuilibrary.com/yui/docs/console/console-basic.html), this will be changed later.
 
 ##Useage
-1. include the js and css file in your file
+include the js and css file in your file
 ```html
     <link type="text/css" rel="stylesheet" href="bobug.css" />
     <script type="text/javascript" charset="utf-8" src="bobug.js"> </script>
 ```
-2.use the apis below
+use the apis below
 
 ##API
 
+###log struct
+```javascript
+{
+  msg : xxxxx
+  _time : xxxx
+  catalog : xxx
+  source : xxxx
+}
+```
+
+
+
+###set ui language, default is English
+```javascript
+Bobug.setLang( 'zh' ); 
+```
+
+###show UI
+```javascript
+Bobug.show();
+```
+
+###basic usage, looks like console in browser
+```javascript
+Bobug.log(123);
+Bobug.info(123);
+Bobug.warn(123);
+Bobug.error(123);
+```
+
+###custom catalog and source
+```javascript
+Bobug.log(123, 'model', 'Bobug');
+
+info, warn, error can also do this
+Bobug.info(123, 'test');
+Bobug.warn(123, 'photo');
+Bobug.error(123, 'blog');
+```
+
+###run a javascript code, ctrl + enter shortcut is also can do this
+```javascript
+Bobug.run('alert(1)');
+```
+
+
+###get lastest logs, your can also give a filter function, the filter function will invoke and pass a log as argument
+```javascript
+//get 3 logs
+console.log( Bobug.getLogs( 3 ) );
+
+//filter by catalog
+console.log( Bobug.getLogs( 3, 'warn' ) );
+
+//fiter by catalog and source
+console.log( Bobug.getLogs( 3, 'warn', 'photo' ) );
+
+//custom a get filter
+Bobug.log( 'entry test oooo' );
+
+console.log( Bobug.getLogs( 2, function( log ){
+    if( log.msg.indexOf('entry') > -1 )  {
+       return true;
+    }
+
+    return false;
+}) );
+```
+
+###load a javascript file by url
+```javascript
+Bobug.loadJs('http://code.jquery.com/jquery-1.7.2.min.js');
+```
 
 
 
