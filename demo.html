@@ -1,0 +1,71 @@
+<html>
+     <head>
+         <meta http-equiv="content-type" content="text/html; charset=utf-8">
+         <title>Index</title>
+         <link type="text/css" rel="stylesheet" href="bobug.css" />
+         <script type="text/javascript" charset="utf-8" src="bobug.js"> </script>
+         <script type="text/javascript"> 
+            function onloadCall(){
+                 //设置语言
+                 Bobug.setLang( 'zh' ); // default is en
+
+                 //展示UI主界面
+                 Bobug.show();
+
+                 //基本
+                 Bobug.log(123);
+                 Bobug.info(123);
+                 Bobug.warn(123);
+                 Bobug.error(123);
+
+                 //分类和来源
+                 Bobug.log(123, 'model', 'Bobug');
+
+                 //展示来源
+                 Bobug.info(123, 'test');
+                 Bobug.warn(123, 'photo');
+                 Bobug.error(123, 'blog');
+
+                 //运行
+                 //UI 中ctrl + enter为运行
+                 //Bobug.run('alert(1)');
+
+
+                 //得到最近的几条log,可以指定分类和来源
+                 //如果不指定，那么显示所有的
+                 //或者指定一个过滤的函数
+
+                 //获取3条
+                 console.log( Bobug.getLogs( 3 ) );
+
+                 //指定分类
+                 console.log( Bobug.getLogs( 3, 'warn' ) );
+
+                 //指定分类和来源
+                 console.log( Bobug.getLogs( 3, 'warn', 'photo' ) );
+
+                 //自定义过滤器
+                 Bobug.log( 'entry test oooo' );
+
+                 //log 结构为
+                 //   msg : xxxxx
+                 //   _time : xxxx
+                 //   catalog : xxx
+                 //   source : xxxx
+
+                 console.log( Bobug.getLogs( 2, function( log ){
+                     if( log.msg.indexOf('entry') > -1 )  {
+                        return true;
+                     }
+
+                     return false;
+                 }) );
+
+                 //载入一个js
+                 Bobug.loadJs('http://code.jquery.com/jquery-1.7.2.min.js');
+            }      
+         </script> 
+     </head>   
+     <body onload="onloadCall()">
+     </body>
+</html>

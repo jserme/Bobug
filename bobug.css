@@ -1,0 +1,193 @@
+.bobug-console-separate {
+	position:absolute;
+	right:1em;
+	top:1em;
+	z-index:999
+}
+.bobug-console-inline {
+	display:-moz-inline-stack;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	vertical-align:top
+}
+
+.bobug-console-inline .bobug-console-content {
+	position:relative
+}
+
+.bobug-console-content {
+	background:#777;
+	_background:#d8d8da url(http://yui.yahooapis.com/3.5.0/build/console/assets/skins/sam/bg.png) repeat-x 0 0;
+	font:normal 13px/1.3 Arial,sans-serif;
+	text-align:left;
+	border:1px solid #777;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+    position:fixed;
+    right:0;
+    bottom:0;
+}
+
+.bobug-console-hd, .bobug-console-bd, .bobug-console-ft {
+	position:relative
+}
+
+.bobug-console-hd, .bobug-console-ft .bobug-console-controls {
+	text-align:right
+}
+
+.bobug-console-hd {
+	background:#d8d8da url(http://yui.yahooapis.com/3.5.0/build/console/assets/skins/sam/bg.png) repeat-x 0 0;
+	padding:1ex;
+	border:1px solid transparent;
+	_border:0 none;
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-right-radius:10px;
+	-webkit-border-top-left-radius:10px
+}
+
+.bobug-console-bd {
+	background:#fff;
+	border-top:1px solid #777;
+	border-bottom:1px solid #777;
+	color:#000;
+	font-size:11px;
+	overflow:auto;
+	overflow-x:auto;
+	overflow-y:scroll;
+	_width:100%
+}
+
+.bobug-console-ft {
+	background:#d8d8da url(http://yui.yahooapis.com/3.5.0/build/console/assets/skins/sam/bg.png) repeat-x 0 0;
+	border:1px solid transparent;
+	_border:0 none;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-webkit-border-bottom-left-radius:10px
+}
+ .bobug-console-controls {
+	padding:4px 1ex;
+	zoom:1
+}
+ .bobug-console-title {
+	color:#000;
+	display:inline;
+	float:left;
+	font-weight:bold;
+	font-size:13px;
+	height:24px;
+	line-height:24px;
+	margin:0;
+	padding-left:1ex
+}
+ .bobug-console-pause-label {
+	float:left
+}
+ .bobug-console-button {
+	line-height:1.3
+}
+ .bobug-console-collapsed .bobug-console-bd, .bobug-console-collapsed .bobug-console-ft {
+	display:none
+}
+ .bobug-console-content.bobug-console-collapsed {
+	-webkit-border-radius:0
+}
+ .bobug-console-collapsed .bobug-console-hd {
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:0
+}
+ .bobug-console-entry {
+	border-bottom:1px solid #aaa;
+	min-height:32px;
+	_height:32px
+}
+ .bobug-console-entry-meta {
+	margin:0;
+	overflow:hidden
+}
+ .bobug-console-entry-content {
+	margin:0;
+	padding:0 1ex;
+	white-space:pre-wrap;
+	word-wrap:break-word
+}
+
+.bobug-console-entry-meta .bobug-console-entry-src {
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+	float:right;
+	margin:2px 5px 0 0
+}
+
+.bobug-console-entry-meta .bobug-console-entry-time {
+	color:#777;
+	padding-left:1ex
+}
+
+.bobug-console-entry-warn .bobug-console-entry-meta .bobug-console-entry-time {
+	color:#555
+}
+
+.bobug-console-entry-info .bobug-console-entry-meta .bobug-console-entry-cat, .bobug-console-entry-warn .bobug-console-entry-meta .bobug-console-entry-cat, .bobug-console-entry-error .bobug-console-entry-meta .bobug-console-entry-cat {
+	display:none
+}
+
+.bobug-console-entry-warn {
+	background:#aee url(http://yui.yahooapis.com/3.5.0/build/console/assets/skins/sam/warn_error.png) no-repeat -15px 15px
+}
+
+.bobug-console-entry-error {
+	background:#ffa url(http://yui.yahooapis.com/3.5.0/build/console/assets/skins/sam/warn_error.png) no-repeat 5px -24px;
+	color:#900
+}
+
+.bobug-console-entry-warn .bobug-console-entry-content, .bobug-console-entry-error .bobug-console-entry-content {
+	padding-left:24px
+}
+.bobug-console-entry-cat {
+	text-transform:uppercase;
+	padding:1px 4px;
+	background-color:#ccc
+}
+.bobug-console-entry-info .bobug-console-entry-cat {
+	background-color:#ac2
+}
+.bobug-console-entry-warn .bobug-console-entry-cat {
+	background-color:#e81
+}
+.bobug-console-entry-error .bobug-console-entry-cat {
+	background-color:#b00;
+	color:#fff
+}
+
+.bobug-console-command textarea {
+    width:100%;
+    border : 1px solid #6c6c6c;
+    margin : 0;
+    padding:0;
+}
+
+.bobug-console-hidden {
+	display:none
+}
+
+.bobug-console-run {
+    margin-left:20px;
+    float:left;
+} 
+
+#bobug-css-stamp.skin-sam-console {
+	display:none
+}
+
