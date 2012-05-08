@@ -154,7 +154,7 @@ Bobug.lang.zh = {
 				}
 			});
 
-			this._filters = [];
+			this._filters = tmp;
 		},
 
 		filter: function(log) {
